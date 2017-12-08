@@ -1,0 +1,200 @@
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: "Calibri";
+}
+h1,h2,h3,h4,h5,h6,ul,li,p,a,div, * {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #000;
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  box-sizing: border-box;
+  outline: none;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$glass-white: rgba(255, 255, 255, .4);
+$glass-white-hover: rgba(255, 255, 255, .3);
+
+$glass: rgba(255, 255, 255, .1);
+$glass-hover: rgba(255, 255, 255, .15);
+
+$glass-delete: rgba(255, 255, 255, .2);
+
+$purple: #6C5B7B;
+$blue: #355C7D;
+
+#root {
+    font: {
+        family: 'Roboto';
+    }
+    height: 100vh;
+    background: linear-gradient(90deg, $blue, $purple);
+
+    .app {
+        padding: 50px;
+        h1 {
+            color: $glass-white;
+            text-align: center;
+            padding: 25px;
+            font: {
+                size: 3rem;
+            }
+        }
+        &-form {
+            display: flex;
+            justify-content: center;
+            padding: 0 25px;
+
+            &-input {
+                flex: 5;
+                height: 50px;
+                padding: 0 15px;
+                background: $glass;
+                border: none;
+                color: $glass-white;
+                border-radius: 5px 0 0 5px;
+                transition: background .3s ease-out;
+                font: {
+                    size: 17px;
+                }
+                &:hover {
+                    background: $glass-hover;
+                }
+            }
+            &-button {
+                flex: 1.5;
+                background: $glass-white;
+                border: none;
+                cursor: pointer;
+                color: $purple;
+                border-radius: 0 5px 5px 0;
+                transition: background .3s ease-out;
+                font: {
+                    size: 1rem;
+                    family: "Roboto";
+                    weight: bold;
+                }
+                &:hover {
+                    background: $glass-white-hover;
+                }
+            }
+        }
+        &-list {
+            padding: 0 25px;
+            margin-top: 30px;
+            &-item {
+                display: flex;
+                justify-content: space-between;
+                background: $glass;
+                margin-top: 10px;
+                border-radius: 5px;
+                transition: background .3s ease-out;
+                overflow: hidden;
+                &-text {
+                    color: $glass-white;
+                    font: {
+                        size: 17px;
+                    }
+                    padding: 15px;
+                }
+                &-icon {
+                    color: $glass-white;
+                    cursor: pointer;
+                    padding: 15px;
+                    background: $glass-delete;
+                    font: {
+                        size: 17px;
+                    }
+                }
+                &:hover {
+                    background: $glass-hover;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #root {
+        .app {
+            padding: 30px 5px;
+            &-form {
+                display: flex;
+                justify-content: center;
+                padding: 0 10px;
+
+                &-input {
+                    flex: 4;
+                    height: 50px;
+                    padding: 0 15px;
+                    background: $glass;
+                    border: none;
+                    color: $glass-white;
+                    border-radius: 5px 0 0 5px;
+                    transition: background .3s ease-out;
+                    font: {
+                        size: 17px;
+                    }
+                    &:hover {
+                        background: $glass-hover;
+                    }
+                }
+                &-button {
+                    flex: 1;
+                    background: $glass-white;
+                    border: none;
+                    cursor: pointer;
+                    color: $purple;
+                    border-radius: 0 5px 5px 0;
+                    transition: background .3s ease-out;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    font: {
+                        size: 1rem;
+                        family: "Roboto";
+                        weight: bold;
+                    }
+                    &:hover {
+                        background: $glass-white-hover;
+                    }
+                }
+            }
+            &-list {
+                padding: 0 10px;
+                margin-top: 30px;
+                &-item {
+                    display: flex;
+                    justify-content: space-between;
+                    background: $glass;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    transition: background .3s ease-out;
+                    overflow: hidden;
+                    &-text {
+                        color: $glass-white;
+                        font: {
+                            size: 17px;
+                        }
+                        padding: 15px;
+                    }
+                    &-icon {
+                        color: $glass-white;
+                        cursor: pointer;
+                        padding: 15px;
+                        background: $glass-delete;
+                        font: {
+                            size: 17px;
+                        }
+                    }
+                    &:hover {
+                        background: $glass-hover;
+                    }
+                }
+            }
+        }
+    }
+}
