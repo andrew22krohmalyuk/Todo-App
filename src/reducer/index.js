@@ -11,7 +11,6 @@ const reducer = (state = [], action) => {
                     }
                 ]
         case "DELETE_TODO":
-        console.log(action.id)
             return state.filter((i) => i.id !== action.id);
 
         default:
